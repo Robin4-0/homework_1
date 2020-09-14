@@ -44,11 +44,11 @@ Thus, implemente a NODE able to:
 ##### Apriltags example:
 - Open a shell and launch the simulated environment in Gazebo:
 ```
-$ roslaunch ar_arena ar_bringup.launch simulation:=true
+$ roslaunch robin_arena robin_bringup.launch simulation:=true
 ```
 - Place some objects on the table in front of the robot and, on a new shell, launch the AprilTag node:
 ```
-$ roslaunch ar_arena apriltag.launch simulation:=true
+$ roslaunch robin_arena apriltag.launch simulation:=true
 ```
 - Open Rviz (third shell):
 ```
@@ -70,4 +70,4 @@ object. The adopted algorithm should exploit colors or shapes in order to recogn
 known PCL 3D object recognition technique is based on [Correspondence Grouping](http://pointclouds.org/documentation/tutorials/correspondence_grouping.php)
 
 ##### Note:
-- Object meshes are provided (in ar_arena/meshes)
+- Object meshes are provided (in robin_arena/meshes)
