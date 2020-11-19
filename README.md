@@ -6,31 +6,31 @@ Suppose to have N = 2 objects randomly placed on a table in front of a manipulat
 | ---|:----------------:| 
 | 0  | red_cube_0       |
 | 1  | red_cube_1       | 
-| 2  | red_cube_2       |
-| 3  | red_cube_3       |
-| 9  | blue_cube_0      |
-| 10 | blue_cube_1      |
-| 11 | blue_cube_2      |
-| 12 | blue_cube_3      |
+| 2  | red_cube_2       |  
+| 3  | red_cube_3       |  
+| 9  | blue_cube_0      |  
+| 10 | blue_cube_1      |  
+| 11 | blue_cube_2      |  
+| 12 | blue_cube_3      |  
 
 
-that means: “Apriltag with id = 0 is placed on the top of an object framed red_cube_0”.
+that means: “Apriltag with id = 0 is attached on the top of an object called red_cube_0”.
 
-Among others, the Apriltag ROS node publishes a topic named */tag_detections*, which outputs a message of type [*geometry_msgs/PoseWithCovarianceStamped*](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html) containing the relative pose (position and orientation), called *obj_pose_camera* in this homework, between the camera frame and each detected tag’s frame.
+Among others, the Apriltag ROS node publishes a topic named */tag_detections*, which outputs a message of type [*geometry_msgs/PoseWithCovarianceStamped*](http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html) containing the relative pose (position and orientation) between the camera frame of reference and the frame of reference of each detected tag. In this homework, the pose of the object in the camera frame of reference is called *obj_pose_camera*. 
 
-Homework 1 asks to:
+For Homework 1 you are asked to:
 - listen to the */tag_detections* topic;
 - for each detected object, compute the transformation between the camera frame and the frame */world*;
-- as a consequence, compute *obj_pose_world*, i.e., the position of the tag in the frame */world*;
+- as a consequence, compute *obj_pose_world*, i.e., the pose of the tag in the frame */world*;
 - publish a custom message containing [*obj_pose_camera*, *obj_pose_world*].
 
 
-##### Apriltags example:
+##### Instructions to launch the Apriltag node with 2 objects on the table:
 - Open a shell and launch the simulated environment in Gazebo:
 ```
 $ roslaunch robin_arena robin_bringup.launch simulation:=true spawn_marrtino:=false arena_name:=robin_arena_simplified
 ```
-- Place  N = 2 objects on the table
+- Place  N = 2 objects on the white table by dragging them from the brown table.  
 
 - On a new shell, launch the AprilTag node:
 ```
