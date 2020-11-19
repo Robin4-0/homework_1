@@ -1,6 +1,6 @@
 # Homework 1 - Perception
 
-Suppose to have N ≤ 2 objects randomly placed on a table in front of a manipulator robot. They are identified by N different [APRILTAG](https://april.eecs.umich.edu/software/apriltag) markers, placed on their top. The following identification table is used:
+Suppose to have N = 2 objects randomly placed on a table in front of a manipulator robot. They are identified by N different [APRILTAG](https://april.eecs.umich.edu/software/apriltag) markers, placed on their top. The following identification table is used:
 
 | id | frame_id         |
 | ---|:----------------:| 
@@ -30,7 +30,7 @@ Homework 1 asks to:
 ```
 $ roslaunch robin_arena robin_bringup.launch simulation:=true spawn_marrtino:=false arena_name:=robin_arena_simplified
 ```
-- Place  N ≤ 2 objects on the table
+- Place  N = 2 objects on the table
 
 - On a new shell, launch the AprilTag node:
 ```
